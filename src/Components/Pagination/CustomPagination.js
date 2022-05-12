@@ -6,8 +6,9 @@ import "./Pagination.css";
 
 const darkTheme = createTheme({
   palette: {
+    type: "dark",
     primary: {
-      main: "#1976D2",
+      main: "#ffff",
     },
   },
 });

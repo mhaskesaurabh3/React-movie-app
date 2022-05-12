@@ -35,21 +35,33 @@ const MainNav = () => {
             style={{ color: "white" }}
             label="Trending"
             icon={<WhatshotIcon />}
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
           />
           <BottomNavigationAction
             style={{ color: "white" }}
             label="Movies"
             icon={<MovieIcon />}
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
           />
           <BottomNavigationAction
             style={{ color: "white" }}
             label="TV Series"
             icon={<LiveTvIcon />}
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
           />
           <BottomNavigationAction
             style={{ color: "white" }}
             label="Search"
             icon={<SearchIcon />}
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
           />
         </BottomNavigation>
       </Box>
