@@ -41,7 +41,7 @@ const Movies = () => {
                 <SingleContent
                   key={elem.id}
                   id={elem.id}
-                  poster={elem.backdrop_path || elem.poster_path}
+                  poster={elem.poster_path || elem.backdrop_path}
                   title={elem.title || elem.name}
                   date={elem.release_date || elem.fisrt_air_date}
                   mediaType="movie"

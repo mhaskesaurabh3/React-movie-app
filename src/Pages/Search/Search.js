@@ -67,8 +67,8 @@ const Search = () => {
           }}
           style={{ paddingBottom: 5 }}
         >
-          <Tab style={{ width: "50%" }} label="Search Movies"></Tab>
-          <Tab style={{ width: "50%" }} label="Search Web Series"></Tab>
+          <Tab style={{ width: "100%" }} label="Search Movies"></Tab>
+          <Tab style={{ width: "100%" }} label="Search Web Series"></Tab>
         </Tabs>
       </ThemeProvider>
       <div className="trending">

@@ -2,11 +2,11 @@ import React from "react";
 import { img_300, img_500, unavailable } from "../Config/Config";
 import "./SingleContent.css";
 import Badge from "@mui/material/Badge";
-import CustomPagination from "../Pagination/CustomPagination";
+import ContentModal from "../Modal/ContentModal";
 
 const SingleContent = ({ id, poster, title, date, mediaType, voteAvg }) => {
   return (
-    <div className="media">
+    <ContentModal mediaType={mediaType} id={id}>
       <Badge
         badgeContent={voteAvg}
         color={voteAvg > 7 ? "success" : "secondary"}
@@ -22,7 +22,7 @@ const SingleContent = ({ id, poster, title, date, mediaType, voteAvg }) => {
         {mediaType === "tv" ? "Web Series" : "Movie"}
         <span className="subTitle">{date}</span>
       </span>
-    </div>
+    </ContentModal>
   );
 };
 
