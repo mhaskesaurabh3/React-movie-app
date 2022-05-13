@@ -9,12 +9,14 @@ import "./Trending.css";
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
+  const [numOfPages, setNumOfPages] = useState();
 
   const fetchtrending = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/week?api_key=1d203e3a6ccbb77dd4d9d548b01f565f&page=${page}`
     );
     setContent(data.results);
+    setNumOfPages(data.total_pages);
   };
 
   useEffect(() => {
@@ -43,7 +45,7 @@ const Trending = () => {
             })
             .slice(0, 18)}
       </div>
-      <CustomPagination setPage={setPage} />
+      <CustomPagination setPage={setPage} numOfPages={numOfPages} />
     </div>
   );
 };

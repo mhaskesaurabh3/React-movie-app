@@ -13,7 +13,7 @@ const darkTheme = createTheme({
   },
 });
 
-const CustomPagination = ({ setPage, numOfPages = 10 }) => {
+const CustomPagination = ({ setPage, numOfPages }) => {
   const handleChange = (page) => {
     setPage(page);
     window.scroll(0, 0);

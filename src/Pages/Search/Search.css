@@ -1,3 +1,13 @@
 .css-10botns-MuiInputBase-input-MuiFilledInput-input {
   color: white !important;
 }
+
+.css-heg063-MuiTabs-flexContainer {
+  display: flex;
+  justify-content: center !important;
+}
+
+.css-gywb8y-MuiButtonBase-root-MuiTab-root,
+.css-11qipip-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important;
+}

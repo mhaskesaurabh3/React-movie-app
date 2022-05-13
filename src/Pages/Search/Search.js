@@ -27,7 +27,7 @@ const Search = () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/search/${
         type ? "tv" : "movie"
-      }?api_key=1d203e3a6ccbb77dd4d9d548b01f565f&language=en-US&query=${searchText}page=${page}&include_adult=false`
+      }?api_key=1d203e3a6ccbb77dd4d9d548b01f565f&language=en-US&query=${searchText}&page=${page}&include_adult=false`
     );
     setContent(data.results);
     setNumOfPages(data.total_pages);
@@ -40,7 +40,12 @@ const Search = () => {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
-        <div style={{ display: "flex", margin: "15px 0" }}>
+        <div
+          style={{
+            display: "flex",
+            margin: "15px 0",
+          }}
+        >
           <TextField
             style={{ flex: 1 }}
             className="searchbox"
@@ -65,7 +70,7 @@ const Search = () => {
             setType(newValue);
             setPage(1);
           }}
-          style={{ paddingBottom: 5 }}
+          style={{ paddingBottom: 5, justifyContent: "center" }}
         >
           <Tab style={{ width: "100%" }} label="Search Movies"></Tab>
           <Tab style={{ width: "100%" }} label="Search Web Series"></Tab>
@@ -78,7 +83,7 @@ const Search = () => {
               <SingleContent
                 key={elem.id}
                 id={elem.id}
-                poster={elem.backdrop_path || elem.poster_path}
+                poster={elem.poster_path || elem.backdrop_path}
                 title={elem.title || elem.name}
                 date={elem.release_date || elem.first_air_date}
                 mediaType={type ? "tv" : "movie"}

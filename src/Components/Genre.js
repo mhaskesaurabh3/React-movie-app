@@ -1,23 +1,24 @@
 import { Chip } from "@mui/material";
 import axios from "axios";
 import React, { useEffect } from "react";
+import "../App.css";
 
 const Genre = ({
   selectedGenres,
-  setSelectedGenres,
+  setSelectedGeneres,
   genres,
   setGenres,
   type,
   setPage,
 }) => {
   const handleAdd = (genre) => {
-    setSelectedGenres([...selectedGenres, genre]);
+    setSelectedGeneres([...selectedGenres, genre]);
     setGenres(genres.filter((g) => g.id !== genre.id));
     setPage(1);
   };
 
   const handleRemove = (genre) => {
-    setSelectedGenres(
+    setSelectedGeneres(
       selectedGenres.filter((selected) => selected.id !== genre.id)
     );
     setGenres([...genres, genre]);
@@ -48,7 +49,7 @@ const Genre = ({
             key={genre.id}
             style={{ margin: "6" }}
             size="small"
-            color="secondary"
+            color="primary"
             onDelete={() => handleRemove(genre)}
           />
         );
