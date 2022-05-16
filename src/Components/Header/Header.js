@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import Logo from ".";
 
 const scrollUp = () => {
   window.scroll(0, 0);
