@@ -2,12 +2,13 @@
   color: white !important;
 }
 
-.css-heg063-MuiTabs-flexContainer {
-  display: flex;
-  justify-content: center !important;
+.css-2bxn45,
+.css-1viwg0c {
+  color: white !important;
 }
 
-.css-gywb8y-MuiButtonBase-root-MuiTab-root,
-.css-11qipip-MuiFormLabel-root-MuiInputLabel-root {
-  color: #fff !important;
+.css-k008qs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
