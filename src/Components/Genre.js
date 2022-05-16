@@ -29,7 +29,6 @@ const Genre = ({
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/genre/${type}/list?api_key=1d203e3a6ccbb77dd4d9d548b01f565f&language=en-US`
     );
-    console.log(data.genres);
     setGenres(data.genres);
   };
 

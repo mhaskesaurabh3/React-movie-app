@@ -35,6 +35,7 @@ const Search = () => {
 
   useEffect(() => {
     fetchSearch();
+    // eslint-disable-next-line
   }, [type, page]);
 
   return (

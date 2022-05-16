@@ -17,12 +17,12 @@ const Movies = () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=1d203e3a6ccbb77dd4d9d548b01f565f&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate&page=${page}&with_genres=${genreforURL}`
     );
-    console.log(data);
     setContent(data.results);
     setNumOfPages(data.total_pages);
   };
   useEffect(() => {
     fetchMovies();
+    // eslint-disable-next-line
   }, [page, genreforURL]);
 
   return (
